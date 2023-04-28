@@ -1,4 +1,5 @@
 import Navbar from './components/navbar';
+import Card from './components/card';
 
 function App() {
   return (
@@ -10,7 +11,12 @@ function App() {
         <h1>Cosa desideri ordinare?</h1>
         <hr></hr>
         <div className='row'>
-
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
     </>

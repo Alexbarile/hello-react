@@ -1,4 +1,4 @@
-function Navbar(params) {
+function Navbar() {
     return (
         <nav className="navbar bg-dark">
             <div className="container-fluid">
