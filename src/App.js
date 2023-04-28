@@ -1,27 +1,51 @@
+// VARIABILI
+
+import React, { Component } from 'react';
 import Navbar from './components/navbar';
 import Card from './components/card';
+import california from './images/california.png';
+import dragon from './images/dragon.png';
+import dynamite from './images/dynamite.png';
+import philadelphia from './images/philadelphia.png';
+import rainbow from './images/rainbow.png';
+import shrimp from './images/shrimp.png';
 
-function App() {
-  return (
+// CLASS COMPONENT
+class App extends Component {
 
-    // FRAGMENT JSX
-    <>
-      <Navbar />
-      <div className='container'>
-        <h1>Cosa desideri ordinare?</h1>
-        <hr></hr>
-        <div className='row'>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+  // ARRAY
+  state = {
+    cards: [
+      { id: 0, nome: "California", prezzo: 1.99, immagine: california },
+      { id: 1, nome: "Dragon", prezzo: 3.49, immagine: dragon },
+      { id: 2, nome: "Dynamite", prezzo: 2.49, immagine: dynamite },
+      { id: 3, nome: "Philadelphia", prezzo: 0.99, immagine: philadelphia },
+      { id: 4, nome: "Rainbow", prezzo: 2.99, immagine: rainbow },
+      { id: 5, nome: "Shrimp", prezzo: 1.49, immagine: shrimp },
+    ]
+  }
+  render() {
+    return (
+
+      // FRAGMENT JSX
+      <>
+        <Navbar />
+        <div className='container'>
+          <h1>Cosa desideri ordinare?</h1>
+          <hr></hr>
+          <div className='row'>
+            {this.state.cards.map(card => (
+              <Card
+                key={card.id}
+                card={card}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </>
+      </>
 
-  );
+    );
+  }
 }
 
 export default App;
