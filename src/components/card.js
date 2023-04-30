@@ -9,7 +9,7 @@ class Card extends Component {
                     <div className="card-body">
                         <h5 className="card-title">{this.props.card.nome} Roll</h5>
                         <p className="card-text">{this.props.card.prezzo}€</p>
-                        <button className="btn btn-danger">Elimina</button>
+                        <button onClick={() => this.props.onDelete(this.props.card.id)} className="btn btn-danger">Elimina</button>
                     </div>
                 </div>
             </div>
