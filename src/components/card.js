@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Card extends Component {
     render() {
         return (
-            <div className="col">
+            <div className="col p-3">
                 <div className="card" style={{ width: '18rem', textAlign: 'center' }}>
                     <div className="row p-0 m-0">
                         <div className="col-6">
